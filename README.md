@@ -26,6 +26,11 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 MIT
 
+## Credits
+
+[yyzz2333/NyxPrinterClient](https://github.com/yyzz2333/NyxPrinterClient)
+[Aladdin16659/NyxPrinter](https://github.com/Aladdin16659/NyxPrinter)
+
 ---
 
 Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

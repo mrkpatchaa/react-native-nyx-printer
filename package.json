@@ -37,7 +37,7 @@
     "build:ios": "cd example/ios && xcodebuild -workspace NyxPrinterExample.xcworkspace -scheme NyxPrinterExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
     "bootstrap": "yarn example && yarn install && yarn example pods",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build",
-    "postinstall": "./scripts/aidl.sh"
+    "postinstall": "[ -f ./scripts/aidl.sh ] || ./scripts/aidl.sh"
   },
   "keywords": [
     "react-native",
