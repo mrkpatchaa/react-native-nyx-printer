@@ -29,6 +29,7 @@ MIT
 ## Credits
 
 [yyzz2333/NyxPrinterClient](https://github.com/yyzz2333/NyxPrinterClient)
+
 [Aladdin16659/NyxPrinter](https://github.com/Aladdin16659/NyxPrinter)
 
 ---
