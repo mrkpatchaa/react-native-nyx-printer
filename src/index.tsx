@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+import NyxTextFormat from './NyxTextFormat';
 
 const LINKING_ERROR =
   `The package 'react-native-nyx-printer' doesn't seem to be linked. Make sure: \n\n` +
@@ -27,3 +28,32 @@ const NyxPrinter = NyxPrinterModule
 export function multiply(a: number, b: number): Promise<number> {
   return NyxPrinter.multiply(a, b);
 }
+
+export function printText(
+  text: string,
+  textFormat = new NyxTextFormat()
+): Promise<number> {
+  return NyxPrinter.printText(text, textFormat.toObject());
+}
+
+export function printBarcode(
+  content: string,
+  width: number,
+  height: number
+): Promise<number> {
+  return NyxPrinter.printBarcode(content, width, height);
+}
+
+export function printQrCode(
+  content: string,
+  width: number,
+  height: number
+): Promise<number> {
+  return NyxPrinter.printQrCode(content, width, height);
+}
+
+export function printBitmap(inputBytes: byte[]): Promise<number> {
+  return NyxPrinter.printBitmap(inputBytes);
+}
+
+export { NyxTextFormat };

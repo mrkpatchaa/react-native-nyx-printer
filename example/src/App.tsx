@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-nyx-printer';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { multiply, printText, NyxTextFormat } from 'react-native-nyx-printer';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
@@ -13,6 +13,16 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
+      <Button
+        onPress={() => {
+          console.log('hey');
+          printText('blah')
+            .then((value) => console.log(value))
+            .catch((e) => console.log(e));
+          // console.log(result);
+        }}
+        title="Print text"
+      />
     </View>
   );
 }
